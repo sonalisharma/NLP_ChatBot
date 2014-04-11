@@ -1,13 +1,13 @@
 # content of test_sample.py
 import sys
 sys.path.append('../')
-
 import chat as c
-import ourchat as o
+from ourchat import *
 import nltk
 import pytest
+from pairs import getpairs
 
-chatbot = c.Chat(o.pairs, nltk.chat.eliza.reflections)
+chatbot = c.Chat(getpairs(), nltk.chat.eliza.reflections)
 
 
 def test_getbigrams():
