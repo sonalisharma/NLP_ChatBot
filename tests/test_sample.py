@@ -5,6 +5,7 @@ sys.path.append('../')
 import chat as c
 import ourchat as o
 import nltk
+import pytest
 
 chatbot = c.Chat(o.pairs, nltk.chat.eliza.reflections)
 

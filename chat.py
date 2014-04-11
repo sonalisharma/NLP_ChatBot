@@ -39,6 +39,8 @@ reflections = {
  "urs"    : "mine"
 }
 
+
+
 hist_ques = []      # stores the user's statements and questions
 hist_topics = []    # stores previous conversation topics (list of nouns)
 
