@@ -15,6 +15,8 @@ import nltk
 from bs4 import BeautifulSoup
 import urllib2
 import nltk
+from nltk import bigrams
+from nltk.corpus import stopwords
 
 
 reflections = {
@@ -214,6 +216,10 @@ class Chat(object):
         else:
             return "",""
 
+    def createBiGrams(self,query):
+          #tokens = [word for word in query.lower().split() if word not in stopwords]
+          #bigrs = bigrams(tokens)
+          return [query]
     # Get answer about users topic from wolfram alpha API
     def get_fromwolfram(self, input):
         url  = 'http://api.wolframalpha.com/v2/query?appid=UAGAWR-3X6Y8W777Q&input='+input.replace(" ","%20")+'&format=plaintext'
